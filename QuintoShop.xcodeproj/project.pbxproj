@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		442B00472A332E10001D9F08 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442B00462A332E10001D9F08 /* ProductModel.swift */; };
+		442B004A2A333104001D9F08 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 442B00492A333104001D9F08 /* GoogleService-Info.plist */; };
+		442B004D2A333385001D9F08 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 442B004C2A333385001D9F08 /* FirebaseFirestore */; };
+		442B004F2A333386001D9F08 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 442B004E2A333386001D9F08 /* FirebaseStorage */; };
 		4470EBE12A2CC405001C7FD5 /* QuintoShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4470EBE02A2CC405001C7FD5 /* QuintoShopApp.swift */; };
 		4470EBE32A2CC405001C7FD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4470EBE22A2CC405001C7FD5 /* ContentView.swift */; };
 		4470EBE52A2CC405001C7FD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4470EBE42A2CC405001C7FD5 /* Assets.xcassets */; };
@@ -14,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		442B00462A332E10001D9F08 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		442B00492A333104001D9F08 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4470EBDD2A2CC405001C7FD5 /* QuintoShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuintoShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4470EBE02A2CC405001C7FD5 /* QuintoShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuintoShopApp.swift; sourceTree = "<group>"; };
 		4470EBE22A2CC405001C7FD5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,12 +32,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				442B004D2A333385001D9F08 /* FirebaseFirestore in Frameworks */,
+				442B004F2A333386001D9F08 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		442B00482A332E1B001D9F08 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				442B00462A332E10001D9F08 /* ProductModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		4470EBD42A2CC405001C7FD5 = {
 			isa = PBXGroup;
 			children = (
@@ -53,7 +69,9 @@
 			children = (
 				4470EBE02A2CC405001C7FD5 /* QuintoShopApp.swift */,
 				4470EBE22A2CC405001C7FD5 /* ContentView.swift */,
+				442B00482A332E1B001D9F08 /* Models */,
 				4470EBE42A2CC405001C7FD5 /* Assets.xcassets */,
+				442B00492A333104001D9F08 /* GoogleService-Info.plist */,
 				4470EBE62A2CC405001C7FD5 /* Preview Content */,
 			);
 			path = QuintoShop;
@@ -83,6 +101,10 @@
 			dependencies = (
 			);
 			name = QuintoShop;
+			packageProductDependencies = (
+				442B004C2A333385001D9F08 /* FirebaseFirestore */,
+				442B004E2A333386001D9F08 /* FirebaseStorage */,
+			);
 			productName = QuintoShop;
 			productReference = 4470EBDD2A2CC405001C7FD5 /* QuintoShop.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +133,9 @@
 				Base,
 			);
 			mainGroup = 4470EBD42A2CC405001C7FD5;
+			packageReferences = (
+				442B004B2A333385001D9F08 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 4470EBDE2A2CC405001C7FD5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +152,7 @@
 			files = (
 				4470EBE82A2CC405001C7FD5 /* Preview Assets.xcassets in Resources */,
 				4470EBE52A2CC405001C7FD5 /* Assets.xcassets in Resources */,
+				442B004A2A333104001D9F08 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4470EBE32A2CC405001C7FD5 /* ContentView.swift in Sources */,
+				442B00472A332E10001D9F08 /* ProductModel.swift in Sources */,
 				4470EBE12A2CC405001C7FD5 /* QuintoShopApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,11 +297,11 @@
 				DEVELOPMENT_TEAM = MMRD3ZF494;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -282,9 +309,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = DR.QuintoShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -299,11 +329,11 @@
 				DEVELOPMENT_TEAM = MMRD3ZF494;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,9 +341,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = DR.QuintoShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -339,6 +372,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		442B004B2A333385001D9F08 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		442B004C2A333385001D9F08 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 442B004B2A333385001D9F08 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		442B004E2A333386001D9F08 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 442B004B2A333385001D9F08 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4470EBD52A2CC405001C7FD5 /* Project object */;
 }
